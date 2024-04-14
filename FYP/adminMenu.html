@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+ <title>Main Menu for Admin</title>
+	<style>
+		* { 
+        padding: 0; 
+        margin: 0; 
+        box-sizing: border-box; 
+    	}
+
+        .container{
+                width: 100%;
+                background-image: url( "bgAdmin.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+        .navbar{
+			overflow: hidden;
+        	height: 75px;
+        	display: flex; 
+        	align-items: center;
+        	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,120,120,1), rgba(255,0,0,1));
+    	}
+		
+		.sticky {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+		}
+
+		.logo{
+			height: 65px;
+			margin-left: 10px;
+		}
+
+		nav{
+			flex: 1;
+			text-align: right;
+		}
+
+		nav ul li{
+			list-style: none;
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			padding-right: 7px;
+		}
+
+		nav ul li a:hover{
+			color: white;
+		}
+
+		
+		h1{
+			text-align: center;
+			font-size: 75px;
+            margin-top: 40px;
+		}
+		
+		input{
+			padding: 16px 48px;
+            border-radius: 50px;
+            margin-top: 1rem; 
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            border: none;
+            position: relative;
+            background: #000000;
+            transition: 0.1s;
+            width: 16%;
+            margin-left: 42%;
+			margin-top: 50px;
+            }
+
+		input:hover{
+			background: radial-gradient(circle farthest-corner at 10% 20%, rgba(2,245,255,1) 17.8%, rgba(255,94,247,1)  100.2%);
+            opacity: 0.8;
+            color: black;
+            border: 2px solid #000000;
+		}
+		
+            .footers {
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+			background-color: #0b1623;
+            margin-top: 200px;
+		}
+
+		.left {
+			padding-right: 400px;
+		}
+
+		.left p {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.logo2 {
+			height: 80px;
+			margin-top: 40px;
+		}
+
+		.medsoc-icon {
+			margin-top: 30px;
+			height: 60px;
+		}
+
+		.right p {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		
+	</style>
+</head>
+	<body>
+		<div class="container">
+            <div class="navbar">
+                <img src="UPTMLogo.png" class="logo">
+            </div>
+
+           <h1>Admin Menu</h1>
+
+            <form action="viewAlumni.php" method="post">
+           <p><input type="submit" value="View alumni information" name="viewAlumni"></p>
+           </form>
+
+           <form action="LogIn.html" method="post">
+           <p><input type="submit" value="Log Out" name="cmdlogout"></p>
+			</form>
+
+           <div class="footers">
+            <div class="left">
+                <img src="UPTMLogo.png" class="logo2">
+                <p>Counseling and Alumni</p>
+                <p>Universiti Poly-Tech Malaysia</p>
+                <p>Level 2, Jalan 6/91</p>
+                <p>Taman Shamelin Perkasa</p>
+                <p>Cheras, 56100 Kuala Lumpur</p>
+                </p>
+                <nav>
+                    <ul>
+                           <li><a href="https://www.instagram.com/uptm_official/" target="_blank"><img src="ig-logo.png" class="medsoc-icon"></a></li>
+                          <li><a href="https://www.youtube.com/@uptm_official" target="_blank"><img src="yt-icon.png" class="medsoc-icon"></a></li>
+                           <li><a href="https://www.facebook.com/uptm.official/" target="_blank"><img src="fb-icon.png" class="medsoc-icon"></a></li>
+                        <li><a href="https://www.tiktok.com/@uptm_official" target="_blank"><img src="tiktok-logo.png" class="medsoc-icon"></a></li>
+                        <li><a href="https://www.google.com/maps/place/Universiti+Poly-Tech+Malaysia/@3.1277317,101.7372736,15z/data=!4m6!3m5!1s0x31cc374119aeec81:0xa023551a33256eb1!8m2!3d3.1277317!4d101.7372736!16s%2Fg%2F11fd56zpqd?entry=ttu" target="_blank"><img src="maps-icon.png" class="medsoc-icon"></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="right">
+                <p>CONTACT US</p>
+                <p>Phone: +603 9206 9700</p>
+                <p>Email: alumni@uptm.edu.my</p>
+            </div>
+        </div>
+		</div>
+	</body>
+</html>

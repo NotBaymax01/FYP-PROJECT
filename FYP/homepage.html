@@ -1,0 +1,370 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>homepage</title>
+	<style>
+		* { 
+        padding: 0; 
+        margin: 0; 
+        box-sizing: border-box; 
+    	}
+		
+		.container{
+			width: 100%;
+			background-image: url("bg3.jpg");
+		}
+		
+		.navbar{
+			overflow: hidden;
+        	height: 75px;
+        	display: flex; 
+        	align-items: center;
+        	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,120,120,1), rgba(255,0,0,1));
+    	}
+		
+		.sticky {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+		}
+
+		.logo{
+			height: 65px;
+			margin-left: 10px;
+		}
+
+		nav{
+			flex: 1;
+			text-align: right;
+		}
+
+		nav ul li{
+			list-style: none;
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			padding-right: 7px;
+		}
+
+		nav ul li a:hover{
+			color: white;
+		}
+		
+		.sticky + .home {
+			  padding-top: 60px;
+			}
+		
+		.title{
+			align-content: center;
+			align-items: center;
+			text-align: center;
+			background-image:url("kolej.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			height: 300px;
+		}
+		
+		.titleName{
+			font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+			font-size: 100px;
+			padding-top: 100px;
+			color: white;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: black;
+		}
+		
+		.welcome{
+			background: #008AFF;
+			align-content: center;
+			text-align: center;
+			height: 85px;
+		}
+		
+		.welcome p{
+			font-size: 35px;
+			color: white;
+		}
+		
+		.welcomeText{
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+		}
+
+		.welcomeText p{
+			font-size: 22px;
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			padding-left: 15px;
+			padding-right: 5px;
+			text-align: justify;
+		}
+
+		.registerText {
+			font-size: 30px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			text-align: center;
+		}
+
+		.form {
+            justify-content: center; 
+            padding-top: 3rem;
+			background-color: white;
+        }
+
+        .userData {
+            display: flex;
+            width: 45vw;
+            height: 60vh;
+			border-style: solid;
+            border-radius: 12px; 
+            box-shadow: rgba(50, 50, 93, 0,25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+            background-color: white;
+			margin-left: 27%;
+			margin-top: 10px;
+			margin-bottom: 105px;
+        }
+		
+		.data {
+			display: inline-block;
+			box-sizing: border-box;
+			margin: 10px 50px;
+		}
+
+        h2 {
+            margin: 1.5rem 0 1rem 0; 
+            text-align: center;
+        }
+		
+		label{
+			font-size: 17px;
+		}
+
+        input {
+			height: 35px;
+            width: 230px;
+            outline: none;
+            font-size: 14px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+			margin: 10px 0;
+        }
+		
+		select{
+			height: 35px;
+            width: 230px;
+            outline: none;
+            font-size: 14px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+			margin: 10px 0;
+		}
+
+        button {
+            padding: 12px 48px;
+            border-radius: 40px;
+            margin-top: 10px; 
+            cursor: pointer;
+            color: white;
+            font-size: 15px;
+            border-radius: 1rem;
+            border: none;
+            position: relative;
+            background: #000000;
+            transition: 0.1s;
+            width: 200px;
+			margin-left: 88%;
+            }
+
+        button::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(2,245,255,1) 17.8%, rgba(255,94,247,1) 100.2%);
+            filter: blur(15px);
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            }
+
+        button:hover {
+            background: radial-gradient(circle farthest-corner at 10% 20%, rgba(2,245,255,1) 17.8%, rgba(255,94,247,1)  100.2%);
+            opacity: 0.8;
+            color: black;
+            }
+		
+		.footers {
+			display: flex;
+  			align-items: center;
+  			justify-content: center;
+			background-color: #0b1623;
+		}
+
+		.left {
+			padding-right: 400px;
+		}
+
+		.left p {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.logo2 {
+			height: 80px;
+			margin-top: 40px;
+		}
+
+		.medsoc-icon {
+			margin-top: 30px;
+			height: 60px;
+		}
+
+		.right p {
+			color: white;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+
+	</style>
+	
+</head>
+
+<body>
+	<div class="container">
+		<div class="home">
+			<div class="title">
+				<p class="titleName">UPTM ALUMNI PORTAL</p>
+			</div>
+			
+			<div class="navbar">
+				<img src="UPTMLogo.png" class="logo">
+				<nav>
+					<ul>
+						<li><a href="homepage.html">HOME</a></li>
+						<li><a href="News.html">NEWS AND EVENT</a></li>
+						<li><a href="AboutUs.html">ABOUT US</a></li>
+						<li><a href="highlight.html">ALUMNI HIGHLIGHTS</a></li>
+						<li><a href="employability.html">CAREER EXPLORATION</a></li>
+						<li><a href="gallery.html">GALLERY</a></li>
+						<li><a href="SignUp.html">SIGN UP</a></li>
+						<li><a href="faq.html">FAQ</a></li>
+						<li><a href="LogIn.html">ADMIN</a></li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="welcomeText">
+				<video height="500" controls autoplay loop muted>
+					<source src="konvo.mp4" type="video/mp4" class="vid">
+			 	 </video>
+				<p>Whether you graduated last year or decades ago, this platform is designed to reconnect you with your alma mater and fellow graduates. Here, you can stay updated on upcoming events, network with other alumni, access exclusive resources, and reminisce about your university experience. We are thrilled to have you join our vibrant community of accomplished individuals, and we look forward to fostering a strong and enduring bond with each and every one of you. Welcome back, and let's embark on this journey of nostalgia, growth, and opportunity together. </p>
+			</div>
+
+			<div class="registerText">
+				<p>Connect you to your Alma Mater</p>
+				<p>Register Now!!!</p>
+			</div>
+
+			<div class="formPage">
+				<form action="signupComplete.php" id="userData" class="userData" method="post">
+				<div class="forms">
+					<h2>User Information</h2>
+					
+					<div class="data">
+						<label>Full Name</label> <br>
+						<input type="text" placeholder="Enter your Name" name="name" id="name" required><br>
+					</div>
+					
+					<div class="data">
+						<label>IC Number (without space or -)</label> <br>
+						<input type="text" placeholder="Enter your IC Number" name="icNum" id="icNum" required><br>
+					</div>
+					
+					<div class="data">
+						<label>Telephone Number</label> <br>
+						<input type="text" placeholder="Enter your Telephone Number" name="telNum" id="telNum" required><br>
+					</div>
+					
+					<div class="data">
+						<label>Email</label> <br>
+						<input type="text" placeholder="Enter your Email" name="email" id="email" required><br>
+					</div>
+					
+					<div class="data">
+						<label>Address</label> <br>
+						<input type="text" placeholder="Enter your Address" name="address" id="address" required><br>
+					</div>
+	
+					<div class="data">
+						<label>Current Job</label> <br>
+						<input type="text" placeholder="Enter your Current Job" name="job" id="job" required><br>
+					</div>
+						
+					<div class="data">
+						<button type="submit" value="submit">Submit</button><br>
+					</div>
+					
+					<input type="hidden" id="totalPriceDatabase" name="totalPriceDatabase"><br>
+				</div>
+			</form>
+			</div>
+
+			<div class="footers">
+				<div class="left">
+					<img src="UPTMLogo.png" class="logo2">
+					<p>Counseling and Alumni</p>
+					<p>Universiti Poly-Tech Malaysia</p>
+					<p>Level 2, Jalan 6/91</p>
+					<p>Taman Shamelin Perkasa</p>
+					<p>Cheras, 56100 Kuala Lumpur</p>
+					</p>
+					<nav>
+						<ul>
+						   	<li><a href="https://www.instagram.com/uptm_official/" target="_blank"><img src="ig-logo.png" class="medsoc-icon"></a></li>
+						  	<li><a href="https://www.youtube.com/@uptm_official" target="_blank"><img src="yt-icon.png" class="medsoc-icon"></a></li>
+						   	<li><a href="https://www.facebook.com/uptm.official/" target="_blank"><img src="fb-icon.png" class="medsoc-icon"></a></li>
+							<li><a href="https://www.tiktok.com/@uptm_official" target="_blank"><img src="tiktok-logo.png" class="medsoc-icon"></a></li>
+							<li><a href="https://www.google.com/maps/place/Universiti+Poly-Tech+Malaysia/@3.1277317,101.7372736,15z/data=!4m6!3m5!1s0x31cc374119aeec81:0xa023551a33256eb1!8m2!3d3.1277317!4d101.7372736!16s%2Fg%2F11fd56zpqd?entry=ttu" target="_blank"><img src="maps-icon.png" class="medsoc-icon"></a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="right">
+					<p>CONTACT US</p>
+					<p>Phone: +603 9206 9700</p>
+					<p>Email: alumni@uptm.edu.my</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.querySelector(".navbar");
+
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>

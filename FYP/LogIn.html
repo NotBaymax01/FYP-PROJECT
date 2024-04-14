@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Log In</title>
+<style>
+    * { 
+        padding: 0; 
+        margin: 0; 
+        box-sizing: border-box; 
+    	}
+
+    .container{
+			width: 100%;
+			background-color: #0b1623;
+		}
+		
+		.navbar{
+			overflow: hidden;
+        	height: 75px;
+        	display: flex; 
+        	align-items: center;
+        	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255,120,120,1), rgba(255,0,0,1));
+    	}
+		
+		.sticky {
+			  position: fixed;
+			  top: 0;
+			  width: 100%;
+		}
+
+		.logo{
+			height: 65px;
+			margin-left: 10px;
+		}
+
+		nav{
+			flex: 1;
+			text-align: right;
+		}
+
+		nav ul li{
+			list-style: none;
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		nav ul li a{
+			text-decoration: none;
+			color: black;
+			font-size: 16px;
+			padding-right: 7px;
+		}
+
+		nav ul li a:hover{
+			color: white;
+		}
+		
+		.sticky + .home {
+			  padding-top: 60px;
+			}
+
+    body {
+        font-family: "Hoefler Text", "Liberation Serif",  "Times New Roman", "serif";
+        background-image: url("bgBlack.jpg"); 
+        background-size: cover; 
+        background-repeat: no-repeat;
+    }
+    
+    .form {
+        display: flex;
+        justify-content: center; 
+        padding-top: 3rem;
+    }
+
+    .sub-form {
+        display: flex;
+        align-items: center; 
+        width: 30vw;
+        height: 55vh;
+		margin-top: 60px;
+        flex-direction: column; 
+        border-radius: 12px; 
+        box-shadow: rgba(50, 50, 93, 0,25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; 
+        background-color: white;
+		margin-bottom: 100px;
+    }
+
+    h2 {
+        margin: 1.5rem 0 2rem 0; 
+        text-align: center;
+		font-size: 30px;
+    }
+
+    Label {
+		font-size: 20px;
+        padding-left: 16px;
+        opacity: 0.75;
+    }
+
+    input {
+		font-size: 17px;
+        display: flex; 
+        border-radius: 50px; 
+        border-style: none; 
+        outline: none; 
+        margin-top: 8px; 
+        padding: 12px 24px; 
+        width: 280px; 
+        background-color: #EAEEED;
+    }
+    
+    button {
+        padding: 12px 48px;
+        border-radius: 50px;
+        margin-top: 1rem; 
+        cursor: pointer;
+        color: white;
+        font-size: 15px;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        background: #000000;
+        transition: 0.1s;
+        width: 80%;
+		margin-left: 8%;
+        }
+    
+    button::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(2,245,255,1) 17.8%, rgba(255,94,247,1) 100.2%);
+        filter: blur(15px);
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+		}
+
+    button:hover {
+        background: radial-gradient(circle farthest-corner at 10% 20%, rgba(2,245,255,1) 17.8%, rgba(255,94,247,1)  100.2%);
+        opacity: 0.8;
+        color: black;
+        }
+	
+	.lower-form{
+		display: flex;
+        justify-content: center; 
+        padding-top: 2rem;
+	}
+	
+	.signUp{
+		padding-left: 5px;
+		text-decoration: none;
+		cursor: pointer;
+		color: #21D4FD;
+	}
+	
+	.signUp:hover{
+		opacity: 0.7;
+	}
+	
+	.socialMedia{
+			height: 10%;
+			display: flex; 
+        	align-items: center;
+        	background:#000000;
+		}
+		
+		.socialMedia nav{
+			flex: 1;
+			text-align: right;
+			padding-left: 100px;
+		}
+		
+		.socialMedia nav ul li{
+			list-style: none;
+			display: inline-block;
+			
+		}
+		
+		.fb-icon{
+			height: 50px;
+			cursor: pointer;
+		}
+		
+		.ig-icon{
+			height: 50px;
+			cursor: pointer;
+		}
+		
+		.twitter-icon{
+			height: 50px;
+			cursor: pointer;
+		}
+		
+		footer {
+			display: block;
+			height: 50hv;
+ 			padding: 3px;
+			text-align: right;
+  			background-color: black;
+  			color: white;
+		}
+	
+    </style>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<img src="UPTMLogo.png" class="logo">
+			<nav>
+				<ul>
+					<li><a href="homepage.html">HOME</a></li>
+					<li><a href="News.html">NEWS AND EVENT</a></li>
+					<li><a href="AboutUs.html">ABOUT US</a></li>
+					<li><a href="highlight.html">ALUMNI HIGHLIGHTS</a></li>
+					<li><a href="employability.html">CAREER EXPLORATION</a></li>
+					<li><a href="gallery.html">GALLERY</a></li>
+					<li><a href="SignUp.html">SIGN UP</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+					<li><a href="LogIn.html">ADMIN</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+<div class="form">
+    <form action="loginAuto.php" class="sub-form" method="post">
+        <div class="upper-form">
+            <h2>Admin Log In</h2>
+			
+            <label>Username</label> <br> 
+            <input type="text" name="username"><br>
+			
+			<label>Password</label> <br>
+            <input type="password" name="password"><br>
+			
+            <div class="button">
+                <button type="submit" value="submit">Submit</button><br>
+            </div>
+			
+			<div class="data">
+                <button type="button" onClick="document.location='homepage.html'">Back to Home</button><br>
+            </div>
+        </div>
+    </form>
+	</div>
+
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		var navbar = document.querySelector(".navbar");
+
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  if (window.pageYOffset >= sticky) {
+			navbar.classList.add("sticky")
+		  } else {
+			navbar.classList.remove("sticky");
+		  }
+		}
+	</script>
+</body>
+</html>
